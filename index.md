@@ -8,7 +8,7 @@ title: Welcome to Asthra
     <div class="hero-logo">
       <img src="/assets/img/asthra_logo.svg" alt="Asthra Logo" class="hero-logo-img">
     </div>
-    <h1 class="hero-title">Build with <span class="highlight">Clarity</span></h1>
+    <h1 class="hero-title">Build with <span class="highlight">AI</span></h1>
     <p class="hero-subtitle">A modern programming language designed for AI code generation efficiency and safe C interoperability.</p>
     
     <div class="hero-actions">
@@ -28,24 +28,28 @@ title: Welcome to Asthra
         <span class="code-title">example.asthra</span>
       </div>
       <div class="code-content">
-        <pre><code class="language-asthra">// Clean, expressive syntax
-struct User {
-    name: String
-    age: Int
-    active: Bool
+        <pre><code class="language-asthra">package main;
+
+// Simple struct definition
+pub struct Point {
+    pub x: f64,
+    pub y: f64,
 }
 
-func processUsers(users: [User]) -> [User] {
-    return users
-        .filter(u => u.active && u.age >= 18)
-        .map(u => User { ...u, name: u.name.capitalize() })
-        .sortBy(u => u.name)
+// Function with error handling
+pub fn distance(p1: Point, p2: Point) -> f64 {
+    let dx: f64 = p1.x - p2.x;
+    let dy: f64 = p1.y - p2.y;
+    return (dx * dx + dy * dy).sqrt();
 }
 
-// Pattern matching and error handling
-match fetchUser(id) {
-    Ok(user) => print("Welcome, ${user.name}!")
-    Err(error) => print("Error: ${error.message}")
+// Main function
+pub fn main() -> Result<i32, string> {
+    let origin: Point = Point { x: 0.0, y: 0.0 };
+    let point: Point = Point { x: 3.0, y: 4.0 };
+    
+    let dist: f64 = distance(origin, point);
+    return Result.Ok(0);
 }</code></pre>
       </div>
     </div>
