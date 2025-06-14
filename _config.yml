@@ -1,0 +1,71 @@
+# Site settings
+title: Asthra Programming Language
+email: your-email@example.com
+description: >-
+  Asthra is a modern programming language designed for clarity, performance, and developer experience.
+  Explore our documentation, tutorials, and latest updates.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourusername.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Custom theme name
+theme_name: "Saravarsham"
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+  blog:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Documentation
+    url: /docs/
+  - title: Blog
+    url: /blog/
+  - title: GitHub
+    url: https://github.com/yourusername/asthra-lang
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - .gitignore
+
+# Sass configuration
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# SEO settings
+author: Asthra Team
+twitter:
+  username: asthra_lang
+social:
+  name: Asthra Programming Language
+  links:
+    - https://github.com/yourusername/asthra-lang 
