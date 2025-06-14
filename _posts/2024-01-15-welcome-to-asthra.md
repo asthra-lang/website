@@ -92,8 +92,8 @@ Asthra is an open-source project, and we welcome contributions from the communit
 
 ## Stay Connected
 
-- Follow our progress on [GitHub](https://github.com/yourusername/asthra-lang)
-- Join the conversation in [Discussions](https://github.com/yourusername/asthra-lang/discussions)
+- Follow our progress on [GitHub](https://github.com/asthra-lang/asthra)
+- Join the conversation in [Discussions](https://github.com/asthra-lang/asthra/discussions)
 - Subscribe to this blog for regular updates
 
 We're thrilled to embark on this journey with you. Welcome to the future of programming with Asthra!

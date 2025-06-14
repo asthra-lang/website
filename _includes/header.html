@@ -4,8 +4,11 @@
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">
-      <span class="site-title-main">{{ site.title | escape }}</span>
-      <span class="site-title-theme">{{ site.theme_name | escape }}</span>
+      <img src="{{ '/assets/img/asthra_logo.svg' | relative_url }}" alt="Asthra Logo" class="site-logo">
+      <div class="site-title-text">
+        <span class="site-title-main">{{ site.title | escape }}</span>
+        <span class="site-title-theme">{{ site.asthra.tagline | escape }}</span>
+      </div>
     </a>
 
     {%- if site.navigation or page_paths -%}

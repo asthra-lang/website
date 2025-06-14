@@ -2,38 +2,54 @@
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">
-            {%- if site.author -%}
-              {{ site.author | escape }}
-            {%- else -%}
-              {{ site.title | escape }}
-            {%- endif -%}
-            </li>
-            {%- if site.email -%}
-            <li><a class="u-email" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {%- endif -%}
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="{{ '/assets/img/asthra_logo.svg' | relative_url }}" alt="Asthra Logo" class="footer-logo">
+          <h3>{{ site.title | escape }}</h3>
+        </div>
+        <p>{{ site.description | escape }}</p>
+        <div class="social-links">
+          {%- include social.html -%}
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/docs/">Documentation</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="https://github.com/asthra-lang/asthra">GitHub</a></li>
+          <li><a href="https://github.com/asthra-lang/asthra/discussions">Community</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
-        {%- include social.html -%}
+      <div class="footer-col">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+          <li><a href="/docs/getting-started/">Getting Started</a></li>
+          <li><a href="/docs/examples/">Examples</a></li>
+          <li><a href="https://github.com/asthra-lang/asthra/releases">Downloads</a></li>
+          <li><a href="https://github.com/asthra-lang/asthra/issues">Report Issues</a></li>
+        </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{- site.description | escape -}}</p>
+      <div class="footer-col">
+        <h3>Community</h3>
+        <ul class="footer-links">
+          <li><a href="https://github.com/asthra-lang/asthra/discussions">Discussions</a></li>
+          <li><a href="https://github.com/asthra-lang/asthra/contributors">Contributors</a></li>
+          <li><a href="/code-of-conduct/">Code of Conduct</a></li>
+          {%- if site.email -%}
+          <li><a href="mailto:{{ site.email }}">Contact</a></li>
+          {%- endif -%}
+        </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
       <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title | escape }}. Built with Jekyll using the {{ site.theme_name | escape }} theme.</p>
+      <p>Open source and available under the <a href="https://github.com/asthra-lang/asthra/blob/main/LICENSE">MIT License</a>.</p>
     </div>
-
   </div>
-
 </footer> 

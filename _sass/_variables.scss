@@ -1,4 +1,5 @@
 // Define defaults for each variable.
+@use "sass:color";
 
 $base-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $heading-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !default;
@@ -6,23 +7,69 @@ $code-font-family: "JetBrains Mono", "SF Mono", Monaco, Inconsolata, "Roboto Mon
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+$base-line-height: 1.6 !default;
 
-$spacing-unit:     30px !default;
+$spacing-unit:     2rem !default;
 
-$text-color:       #2c3e50 !default;
+// Modern color palette
+$text-color:       #1a202c !default;
+$text-color-light: #4a5568 !default;
 $background-color: #ffffff !default;
-$brand-color:      #3498db !default;
+$surface-color:    #f7fafc !default;
+$border-color:     #e2e8f0 !default;
 
-$grey-color:       #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
-$grey-color-dark:  darken($grey-color, 25%) !default;
+// Asthra brand colors - modern gradient-friendly palette
+$asthra-primary:   #6366f1 !default;  // Indigo
+$asthra-secondary: #8b5cf6 !default;  // Purple
+$asthra-accent:    #06b6d4 !default;  // Cyan
+$asthra-success:   #10b981 !default;  // Emerald
+$asthra-warning:   #f59e0b !default;  // Amber
+$asthra-error:     #ef4444 !default;  // Red
 
-// Width of the content area
-$content-width:    800px !default;
+// Gradient colors
+$gradient-start:   $asthra-primary !default;
+$gradient-end:     $asthra-secondary !default;
 
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+// Override brand color with Asthra primary
+$brand-color: $asthra-primary !default;
+
+// Legacy color support
+$grey-color:       #718096 !default;
+$grey-color-light: #cbd5e0 !default;
+$grey-color-dark:  #2d3748 !default;
+
+// Layout
+$content-width:    1200px !default;
+$container-width:  1140px !default;
+
+$on-palm:          768px !default;
+$on-laptop:        1024px !default;
+
+// Modern spacing scale
+$space-xs: 0.25rem !default;
+$space-sm: 0.5rem !default;
+$space-md: 1rem !default;
+$space-lg: 1.5rem !default;
+$space-xl: 2rem !default;
+$space-2xl: 3rem !default;
+$space-3xl: 4rem !default;
+
+// Border radius
+$border-radius-sm: 0.25rem !default;
+$border-radius-md: 0.5rem !default;
+$border-radius-lg: 0.75rem !default;
+$border-radius-xl: 1rem !default;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !default;
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !default;
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !default;
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04) !default;
+
+// Transitions
+$transition-fast: 0.15s ease !default;
+$transition-base: 0.2s ease !default;
+$transition-slow: 0.3s ease !default;
 
 // Use media queries like this:
 // @include media-query($on-palm) {
@@ -41,13 +88,46 @@ $on-laptop:        800px !default;
   font-size: $base-font-size * $ratio;
 }
 
-// Asthra brand colors
-$asthra-primary:   #6366f1 !default;  // Indigo
-$asthra-secondary: #8b5cf6 !default;  // Purple
-$asthra-accent:    #06b6d4 !default;  // Cyan
-$asthra-success:   #10b981 !default;  // Emerald
-$asthra-warning:   #f59e0b !default;  // Amber
-$asthra-error:     #ef4444 !default;  // Red
+// Modern button mixin
+@mixin button-style($bg-color, $text-color: white, $hover-bg: null) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-sm $space-lg;
+  background-color: $bg-color;
+  color: $text-color;
+  text-decoration: none;
+  border-radius: $border-radius-md;
+  font-weight: 500;
+  transition: all $transition-base;
+  border: none;
+  cursor: pointer;
+  
+  @if $hover-bg {
+    &:hover {
+      background-color: $hover-bg;
+      transform: translateY(-1px);
+      box-shadow: $shadow-md;
+    }
+  } @else {
+    &:hover {
+      background-color: color.scale($bg-color, $lightness: -10%);
+      transform: translateY(-1px);
+      box-shadow: $shadow-md;
+    }
+  }
+}
 
-// Override brand color with Asthra primary
-$brand-color: $asthra-primary !default; 
+// Card mixin
+@mixin card-style {
+  background: $background-color;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-md;
+  padding: $space-xl;
+  transition: all $transition-base;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+} 

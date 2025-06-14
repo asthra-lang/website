@@ -27,6 +27,26 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Sync documentation from main repo
+        run: |
+          # Remove existing docs directories
+          rm -rf _docs/contributor _docs/spec _docs/stdlib _docs/user-manual
+          
+          # Clone the main asthra repository
+          git clone --depth 1 https://github.com/asthra-lang/asthra.git temp-asthra
+          
+          # Copy documentation directories
+          cp -r temp-asthra/docs/contributor _docs/
+          cp -r temp-asthra/docs/spec _docs/
+          cp -r temp-asthra/docs/stdlib _docs/
+          cp -r temp-asthra/docs/user-manual _docs/
+          
+          # Clean up
+          rm -rf temp-asthra
+          
+          echo "Documentation synced successfully"
+      
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:

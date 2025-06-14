@@ -23,7 +23,7 @@ This repository contains the source code for the Asthra programming language web
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/asthra-lang-website.git
+   git clone https://github.com/asthra-lang/asthra-website.git
    cd asthra-lang-website
    ```
 
@@ -141,8 +141,8 @@ This website source code is available under the MIT License. See the LICENSE fil
 
 ## Support
 
-- [GitHub Issues](https://github.com/yourusername/asthra-lang/issues)
-- [Discussions](https://github.com/yourusername/asthra-lang/discussions)
+- [GitHub Issues](https://github.com/asthra-lang/asthra/issues)
+- [Discussions](https://github.com/asthra-lang/asthra/discussions)
 - [Documentation](https://asthra-lang.org/docs/)
 
 ---

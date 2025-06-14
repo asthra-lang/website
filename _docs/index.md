@@ -4,44 +4,40 @@ title: Documentation
 permalink: /docs/
 ---
 
-# Asthra Documentation
+Welcome to the comprehensive documentation for Asthra! Whether you're just getting started or diving deep into advanced features, you'll find everything you need here.
 
-Welcome to the Asthra programming language documentation. Here you'll find everything you need to get started with Asthra and master its features.
+## [⚡ Quick Start Guide](/docs/quick-start/)
+Get up and running with Asthra in minutes with our step-by-step quick start guide.
 
-## Getting Started
+## [🚀 User Manual](/docs/user-manual/)
+Complete guide for developers using Asthra, covering everything from basic syntax to advanced features.
 
-- [Installation Guide](installation/)
-- [Your First Asthra Program](first-program/)
-- [Language Tour](language-tour/)
+- **[Getting Started](/docs/user-manual/getting-started/)** - Your first steps with Asthra
+- **[Language Fundamentals](/docs/user-manual/language-fundamentals/)** - Core concepts and syntax
+- **[Building Projects](/docs/user-manual/building-projects/)** - Project structure and build system
+- **[Advanced Topics](/docs/user-manual/advanced-topics/)** - Concurrency, memory management, and more
+- **[Examples](/docs/user-manual/examples/)** - Practical code examples and tutorials
 
-## Language Reference
+## [📖 Language Specification](/docs/spec/)
+Formal specification and technical details of the Asthra language.
 
-- [Syntax Overview](syntax/)
-- [Data Types](data-types/)
-- [Functions](functions/)
-- [Control Flow](control-flow/)
-- [Modules and Packages](modules/)
+- **[Overview](/docs/spec/overview/)** - Language design and philosophy
+- **[Grammar](/docs/spec/grammar/)** - Complete language grammar
+- **[Type System](/docs/spec/types/)** - Type definitions and rules
+- **[Package System](/docs/spec/packages/)** - Module and package organization
 
-## Advanced Topics
+## [🔧 Standard Library](/docs/stdlib/)
+Documentation for Asthra's built-in modules and functions.
 
-- [Memory Management](memory-management/)
-- [Concurrency](concurrency/)
-- [Interoperability](interop/)
-- [Performance Optimization](performance/)
+- **[Core Modules](/docs/stdlib/modules/)** - Essential built-in functionality
+- **[Collections](/docs/stdlib/collections_design/)** - Arrays, maps, and data structures
+- **[Error Handling](/docs/stdlib/02-error-handling/)** - Result types and error management
+- **[Best Practices](/docs/stdlib/best-practices/)** - Recommended patterns and conventions
 
-## Tools and Ecosystem
+## [🤝 Contributor Guide](/docs/contributor/)
+Resources for contributing to the Asthra language and ecosystem.
 
-- [Compiler Options](compiler/)
-- [Package Manager](package-manager/)
-- [IDE Support](ide-support/)
-- [Testing Framework](testing/)
-
-## Examples
-
-- [Code Examples](examples/)
-- [Best Practices](best-practices/)
-- [Common Patterns](patterns/)
-
----
-
-*Can't find what you're looking for? Check out our [FAQ](faq/) or join the discussion on [GitHub](https://github.com/yourusername/asthra-lang/discussions).* 
+- **[Quick Start](/docs/contributor/quick-start/)** - Get started contributing
+- **[Developer Handbook](/docs/contributor/HANDBOOK/)** - Comprehensive contributor guide
+- **[Development Workflows](/docs/contributor/workflows/)** - Build, test, and release processes
+- **[Reference](/docs/contributor/reference/)** - Technical reference for contributors

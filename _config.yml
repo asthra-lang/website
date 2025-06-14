@@ -2,10 +2,13 @@
 title: Asthra Programming Language
 email: your-email@example.com
 description: >-
-  Asthra is a modern programming language designed for clarity, performance, and developer experience.
-  Explore our documentation, tutorials, and latest updates.
+  Asthra is a minimal syntax programming language designed with AI
+  code generation efficiency and safe C interoperability in mind.
+  It is strongly typed with explicit memory management annotations
+  and has built-in support for deterministic execution and observability.
+
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://yourusername.github.io" # the base hostname & protocol for your site
+url: "https://asthra-lang.org" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
@@ -23,10 +26,19 @@ theme_name: "Saravarsham"
 collections:
   docs:
     output: true
-    permalink: /:collection/:name/
+    permalink: /:collection/:path/
   blog:
     output: true
     permalink: /blog/:year/:month/:day/:title/
+
+# Defaults - automatically apply front matter
+defaults:
+  # Apply to all files in the docs collection
+  - scope:
+      path: "_docs"
+      type: "docs"
+    values:
+      layout: "page"
 
 # Navigation
 navigation:
@@ -37,7 +49,7 @@ navigation:
   - title: Blog
     url: /blog/
   - title: GitHub
-    url: https://github.com/yourusername/asthra-lang
+    url: https://github.com/asthra-lang/asthra
 
 # Exclude from processing
 exclude:
@@ -56,6 +68,8 @@ exclude:
 sass:
   sass_dir: _sass
   style: compressed
+  implementation: sass-embedded
+  quiet_deps: true
 
 # Pagination
 paginate: 5
@@ -68,4 +82,7 @@ twitter:
 social:
   name: Asthra Programming Language
   links:
-    - https://github.com/yourusername/asthra-lang 
+    - https://github.com/asthra-lang/asthra 
+
+asthra:
+  tagline: "AI-native language for code generation"

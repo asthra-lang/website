@@ -34,3 +34,9 @@ yarn-error.log*
 # Temporary files
 *.tmp
 *.temp 
+
+# _docs/ subdirectories are synced from main repo
+_docs/contributor/
+_docs/spec/
+_docs/stdlib/
+_docs/user-manual/
