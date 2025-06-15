@@ -28,24 +28,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Sync documentation from main repo
+      - name: Sync versioned documentation from main repo
         run: |
-          # Remove existing docs directories
-          rm -rf _docs/contributor _docs/spec _docs/stdlib _docs/user-manual
+          # Clone the main asthra repository using GITHUB_TOKEN (full clone for tags)
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/asthra-lang/asthra.git temp-asthra
           
-          # Clone the main asthra repository using GITHUB_TOKEN
-          git clone --depth 1 https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/asthra-lang/asthra.git temp-asthra
+          # Install Python dependencies
+          pip install -r requirements.txt
           
-          # Copy documentation directories
-          cp -r temp-asthra/docs/contributor _docs/
-          cp -r temp-asthra/docs/spec _docs/
-          cp -r temp-asthra/docs/stdlib _docs/
-          cp -r temp-asthra/docs/user-manual _docs/
+          # Use Python sync script for versioned documentation
+          python3 sync-docs.py temp-asthra
           
           # Clean up
           rm -rf temp-asthra
-          
-          echo "Documentation synced successfully"
       
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1

@@ -1,0 +1,10 @@
+# Requirements for sync-docs.py
+# Currently uses only Python standard library modules
+# Add future dependencies here as needed
+
+# For potential future enhancements:
+# pyyaml>=6.0  # For YAML configuration files
+# click>=8.0   # For better CLI interface
+# rich>=13.0   # For enhanced terminal output
+
+semver>=2.9.0  # For semantic version parsing and comparison 
