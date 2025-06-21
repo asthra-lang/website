@@ -9,7 +9,7 @@ permalink: /docs/quick-start
 ### Using the installer script (Recommended)
 
 ```bash
-curl -sSf https://install.asthra-lang.org | sh
+curl -sSf https://asthra-lang.org/install | sh
 ```
 
 ### Package Managers
