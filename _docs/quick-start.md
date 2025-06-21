@@ -69,7 +69,7 @@ match result {
 
 ## Getting Help
 
-- **[GitHub Discussions](https://github.com/asthra-lang/asthra/discussions)** - Ask questions and share ideas
+- **[GitHub Discussions](https://github.com/orgs/asthra-lang/discussions)** - Ask questions and share ideas
 - **[GitHub Issues](https://github.com/asthra-lang/asthra/issues)** - Report bugs and request features
 - **[Discord Server](https://discord.gg/asthra)** - Real-time chat with the community
 

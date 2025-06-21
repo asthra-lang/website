@@ -150,7 +150,7 @@ pub fn main() -> Result<i32, string> {
             <span class="quick-link-icon">📝</span>
             <span class="quick-link-text">Latest Updates</span>
           </a>
-          <a href="https://github.com/asthra-lang/asthra/discussions" class="quick-link">
+          <a href="https://github.com/orgs/asthra-lang/discussions" class="quick-link">
             <span class="quick-link-icon">💬</span>
             <span class="quick-link-text">Community</span>
           </a>
@@ -188,7 +188,7 @@ pub fn main() -> Result<i32, string> {
         <span>GitHub Repository</span>
       </a>
       
-      <a href="https://github.com/asthra-lang/asthra/discussions" class="community-link">
+      <a href="https://github.com/orgs/asthra-lang/discussions" class="community-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
         </svg>

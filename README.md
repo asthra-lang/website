@@ -142,7 +142,7 @@ This website source code is available under the MIT License. See the LICENSE fil
 ## Support
 
 - [GitHub Issues](https://github.com/asthra-lang/asthra/issues)
-- [Discussions](https://github.com/asthra-lang/asthra/discussions)
+- [Discussions](https://github.com/orgs/asthra-lang/discussions)
 - [Documentation](https://asthra-lang.org/docs/)
 
 ---
