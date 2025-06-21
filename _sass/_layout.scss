@@ -840,4 +840,234 @@
   max-width: $container-width;
   margin: 0 auto;
   padding: 0 $space-lg;
+}
+
+/**
+ * Warning Banner
+ */
+.warning-banner {
+  background: linear-gradient(135deg, #fef3cd, #fde68a);
+  border: 2px solid #f59e0b;
+  border-radius: $border-radius-lg;
+  margin: $space-lg auto;
+  max-width: $container-width;
+  padding: 0 $space-lg;
+
+  .warning-content {
+    display: flex;
+    align-items: flex-start;
+    gap: $space-md;
+    padding: $space-lg;
+
+    @include media-query($on-palm) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  .warning-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+
+    @include media-query($on-palm) {
+      font-size: 2.5rem;
+      margin-top: 0;
+    }
+  }
+
+  .warning-text {
+    color: #92400e;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 500;
+
+    strong {
+      color: #78350f;
+      font-weight: 700;
+    }
+
+    .warning-link {
+      color: #92400e;
+      text-decoration: underline;
+      font-weight: 600;
+      transition: color $transition-base;
+
+      &:hover {
+        color: #78350f;
+      }
+    }
+  }
+}
+
+/**
+ * Vibe Coding Section
+ */
+.vibe-coding-section {
+  background: #fafafa;
+  border-top: 3px solid #f59e0b;
+  padding: $space-3xl 0;
+
+  .container {
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 $space-lg;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: $space-2xl;
+    color: $text-color;
+
+    @include media-query($on-palm) {
+      font-size: 2rem;
+    }
+  }
+
+  .vibe-coding-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    > p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: $text-color-light;
+      margin-bottom: $space-xl;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: $text-color;
+      margin-bottom: $space-md;
+      margin-top: $space-xl;
+    }
+
+    ul {
+      margin-bottom: $space-xl;
+      padding-left: $space-lg;
+
+      li {
+        margin-bottom: $space-sm;
+        line-height: 1.6;
+        color: $text-color-light;
+
+        strong {
+          color: $text-color;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .vibe-coding-warning {
+    background: #fee2e2;
+    border: 2px solid #fca5a5;
+    border-radius: $border-radius-md;
+    padding: $space-lg;
+    margin: $space-xl 0;
+
+    h3 {
+      color: #dc2626;
+      margin-top: 0;
+      margin-bottom: $space-md;
+    }
+
+    ul li {
+      color: #7f1d1d;
+    }
+  }
+
+  .vibe-coding-appropriate {
+    background: #ecfdf5;
+    border: 2px solid #86efac;
+    border-radius: $border-radius-md;
+    padding: $space-lg;
+    margin: $space-xl 0;
+
+    h3 {
+      color: #059669;
+      margin-top: 0;
+      margin-bottom: $space-md;
+    }
+
+    ul li {
+      color: #064e3b;
+    }
+  }
+
+  .vibe-coding-resources {
+    background: #eff6ff;
+    border: 2px solid #93c5fd;
+    border-radius: $border-radius-md;
+    padding: $space-lg;
+    margin: $space-xl 0;
+
+    h3 {
+      color: #1d4ed8;
+      margin-top: 0;
+      margin-bottom: $space-lg;
+    }
+
+    .resource-links {
+      display: flex;
+      flex-direction: column;
+      gap: $space-md;
+
+      @include media-query($on-laptop) {
+        flex-direction: row;
+        gap: $space-lg;
+      }
+    }
+
+    .resource-link {
+      display: flex;
+      align-items: center;
+      gap: $space-sm;
+      padding: $space-md;
+      background: white;
+      border: 2px solid #dbeafe;
+      border-radius: $border-radius-md;
+      text-decoration: none;
+      color: #1e40af;
+      font-weight: 500;
+      transition: all $transition-base;
+
+      &:hover {
+        background: #dbeafe;
+        transform: translateY(-2px);
+        box-shadow: $shadow-sm;
+        text-decoration: none;
+      }
+
+      svg {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+
+      span {
+        flex: 1;
+      }
+    }
+  }
+
+  .vibe-coding-disclaimer {
+    background: #f3f4f6;
+    border: 2px solid #d1d5db;
+    border-radius: $border-radius-md;
+    padding: $space-lg;
+    margin: $space-xl 0 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $text-color;
+    text-align: center;
+
+    strong {
+      color: #374151;
+      font-weight: 700;
+    }
+  }
 } 
