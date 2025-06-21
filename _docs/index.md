@@ -6,7 +6,7 @@ permalink: /docs/
 
 Welcome to the comprehensive documentation for Asthra! Whether you're just getting started or diving deep into advanced features, you'll find everything you need here.
 
-## [⚡ Quick Start Guide](/docs/quick-start/)
+## [⚡ Quick Start Guide](/docs/quick-start)
 Get up and running with Asthra in minutes with our step-by-step quick start guide.
 
 ## [🚀 User Manual](/docs/user-manual/)
