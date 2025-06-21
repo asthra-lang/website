@@ -31,7 +31,12 @@ jobs:
       - name: Sync versioned documentation from main repo
         run: |
           # Clone the main asthra repository using GITHUB_TOKEN (full clone for tags)
-          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/asthra-lang/asthra.git temp-asthra
+          git clone --branch main https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/asthra-lang/asthra.git temp-asthra
+          
+          # Fetch all tags
+          cd temp-asthra
+          git fetch --all --tags
+          cd ..
           
           # Install Python dependencies
           pip install -r requirements.txt

@@ -86,7 +86,19 @@ def group_by_minor_version(versions: List[semver.VersionInfo]) -> Dict[str, semv
 def checkout_version(repo_path: Path, version: semver.VersionInfo) -> bool:
     """Checkout a specific version tag in the repository."""
     tag = f"v{version}"
-    result = run_git_command(repo_path, ["checkout", tag])
+    
+    # First check if the tag exists
+    tags = run_git_command(repo_path, ["tag", "-l", tag])
+    if not tags:
+        print(f"  ⚠ Tag {tag} not found in repository")
+        return False
+    
+    # Try to checkout the tag
+    result = run_git_command(repo_path, ["checkout", tag, "--quiet"])
+    if not result and result is not None:
+        # Check if checkout was successful by verifying current HEAD
+        current_tag = run_git_command(repo_path, ["describe", "--tags", "--exact-match"])
+        return current_tag == tag
     return result != ""
 
 
